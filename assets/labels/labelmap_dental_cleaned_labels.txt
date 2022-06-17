@@ -1,0 +1,14 @@
+Stain
+Attrition Erosion
+Dentine caries
+Gingivitis
+Root
+Calculus
+Microfracture
+Initial caries
+Ulcer
+Leukoplakia
+Plaque
+Inflammation
+Pigmentation
+Fluorosis
