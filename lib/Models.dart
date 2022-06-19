@@ -1,21 +1,20 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'dart:io';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pytorch_lite/pigeon.dart';
 import 'package:pytorch_lite/pytorch_lite.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
+class Models extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _ModelsState createState() => _ModelsState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _ModelsState extends State<Models> {
   ClassificationModel? _imageModel;
+
   //CustomModel? _customModel;
   late ModelObjectDetection _objectModel;
   String? _imagePrediction;

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1081587920142",
+    "project_id": "diagnosis-data",
+    "storage_bucket": "diagnosis-data.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081587920142:android:f1735539409fc337bb7b5f",
+        "android_client_info": {
+          "package_name": "com.example.smartphone_disease_diagnosis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081587920142-vtslkd2b59oqh4irufuesq6rjcf8ov93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuNVTP1bJulspUnKKW1JsFe549YYuGsF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081587920142-vtslkd2b59oqh4irufuesq6rjcf8ov93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
