@@ -34,7 +34,7 @@ class _SignPageState extends State<SignPage> {
             ),
             Container(
               padding: EdgeInsets.fromLTRB(15.0, 175.0, 0.0, 0.0),
-              child: Text('For Travy',
+              child: Text('For HelpO',
                   style: TextStyle(
                       fontSize: 60.0,
                       fontWeight: FontWeight.bold,
@@ -42,7 +42,7 @@ class _SignPageState extends State<SignPage> {
             ),
             Container(
               padding: EdgeInsets.fromLTRB(270, 175.0, 0.0, 0.0),
-              child: Text('!',
+              child: Text(' !',
                   style: TextStyle(
                       fontSize: 60.0,
                       fontWeight: FontWeight.bold,
