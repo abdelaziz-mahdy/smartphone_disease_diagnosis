@@ -7,12 +7,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:smartphone_disease_diagnosis/Models.dart';
+import 'package:smartphone_disease_diagnosis/screens/scan_home_screen.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(Models());
+    await tester.pumpWidget(const ScanHomeScreen());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
