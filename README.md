@@ -6,5 +6,6 @@
 ## Datasets for training can be found in those links 
   - Dental at https://drive.google.com/file/d/14BuUsdciLJHlDYDBLNXmJMWs11Qm_Dp1/view?usp=sharing 
   - Skin at https://drive.google.com/file/d/1--wQ8py8bk9sVLrewC_y6n6CcCkg9_3s/view?usp=sharing
-
+## Preview
+<img src="app_preview.png">
 
