@@ -1,4 +1,4 @@
-# smartphone_disease_diagnosis
+# SUNO: Smartphone Medical Diagnosis
 
 ## Models notebooks can be found as 
  - yolo_classifier_skin.ipynb
