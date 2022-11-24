@@ -1,5 +1,5 @@
 # SUNO: Smartphone Medical Diagnosis
-
+A self-diagnostic Smartphone Mobile application which provides preliminary diagnosis of different types of diseases based on image analysis.
 ## Models notebooks can be found as 
  - yolo_classifier_skin.ipynb
  - yolov5_dental.ipynb
