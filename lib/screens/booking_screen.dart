@@ -76,7 +76,7 @@ class BookAppointment extends StatelessWidget {
                       activeDayColor: Colors.white,
                       activeBackgroundDayColor:
                           const Color.fromARGB(255, 127, 164, 248),
-                      dotsColor: const Color(0xFF333A47),
+                      dotColor: const Color(0xFF333A47),
                       selectableDayPredicate: (date) =>
                           workDays.contains(DateFormat.E().format(date)),
                       locale: 'en_ISO',

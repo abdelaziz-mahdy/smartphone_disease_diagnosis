@@ -22,7 +22,7 @@ class DentalModel extends ConsumerWidget {
     objDetect = await objectModel.getImagePrediction(
         await File(image.path).readAsBytes(),
         minimumScore: 0.1,
-        IOUThershold: 0.3);
+        iOUThreshold: 0.3);
     // for (var element in objDetect) {
     //   print({
     //     "score": element?.score,

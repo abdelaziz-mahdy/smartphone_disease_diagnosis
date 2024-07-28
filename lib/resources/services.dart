@@ -12,31 +12,32 @@ class NotifyHelper {
 
   initializeNotification() async {
     tz.initializeTimeZones();
-    final IOSInitializationSettings initializationSettingsIOS =
-        IOSInitializationSettings(
+
+    const AndroidInitializationSettings initializationSettingsAndroid =
+        AndroidInitializationSettings('appicon');
+
+    final DarwinInitializationSettings initializationSettingsDarwin =
+        DarwinInitializationSettings(
             requestSoundPermission: false,
             requestBadgePermission: false,
             requestAlertPermission: false,
             onDidReceiveLocalNotification: onDidReceiveLocalNotification);
 
-    const AndroidInitializationSettings initializationSettingsAndroid =
-        AndroidInitializationSettings("appicon");
-
     final InitializationSettings initializationSettings =
         InitializationSettings(
-      iOS: initializationSettingsIOS,
       android: initializationSettingsAndroid,
+      iOS: initializationSettingsDarwin,
     );
 
     await flutterLocalNotificationsPlugin.initialize(initializationSettings,
-        onSelectNotification: selectNotification);
+        onDidReceiveNotificationResponse: onDidReceiveNotificationResponse);
   }
 
   displayNotification({required String title, required String body}) async {
     var androidPlatformChannelSpecifics = const AndroidNotificationDetails(
         'your channel id', 'your channel name',
         importance: Importance.max, priority: Priority.high);
-    var iOSPlatformChannelSpecifics = const IOSNotificationDetails();
+    var iOSPlatformChannelSpecifics = const DarwinNotificationDetails();
     var platformChannelSpecifics = NotificationDetails(
         android: androidPlatformChannelSpecifics,
         iOS: iOSPlatformChannelSpecifics);
@@ -74,12 +75,10 @@ class NotifyHelper {
         );
   }
 
-  Future selectNotification(String? payload) async {
-    // if (payload != null) {
-    //   print('notification payload: $payload');
-    // } else {
-    //   print("Notification Done");
-    // }
+  Future onDidReceiveNotificationResponse(
+      NotificationResponse notificationResponse) async {
+    String? payload = notificationResponse.payload;
+    // Handle the notification response
     Get.to(() => Container(
           color: Colors.white,
         ));

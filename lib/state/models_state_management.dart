@@ -12,7 +12,7 @@ final modelProvider = FutureProvider<List?>((ref) async {
   final ModelObjectDetection? objectModel;
   try {
     imageModel = await PytorchLite.loadClassificationModel(
-        pathImageModel, 512, 512,
+        pathImageModel, 512, 512, 6,
         labelPath: "assets/labels/skin_model_(labels_cleaned)_yolox .txt");
 
     objectModel = await PytorchLite.loadObjectDetectionModel(
