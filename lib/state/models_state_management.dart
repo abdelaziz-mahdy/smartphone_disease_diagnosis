@@ -5,9 +5,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pytorch_lite/pytorch_lite.dart';
 
 final modelProvider = FutureProvider<List?>((ref) async {
-  String pathImageModel = "assets/models/yolo_x_Skin.torchscript";
+  String pathImageModel = "assets/models/yolo_x_skin.torchscript";
   String pathObjectDetectionModel =
-      "assets/models/Dental_cleaned_labels_best.torchscript";
+      "assets/models/dental_cleaned_labels_best.torchscript";
   final ClassificationModel? imageModel;
   final ModelObjectDetection? objectModel;
   try {
