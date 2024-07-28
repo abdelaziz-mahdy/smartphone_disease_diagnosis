@@ -24,7 +24,7 @@ class MainButton extends StatelessWidget {
         width: double.infinity,
         child: TextButton(
             style: ButtonStyle(
-                overlayColor: MaterialStateProperty.resolveWith(
+                overlayColor: WidgetStateProperty.resolveWith(
               (states) => Colors.white10,
             )),
             onPressed: onTap,

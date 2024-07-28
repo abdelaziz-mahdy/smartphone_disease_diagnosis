@@ -33,10 +33,13 @@ class DoctorsList extends ConsumerWidget {
                     //   'id': value[index].id,
                     //   'model': doctorModel,
                     // }),
-                    onTap: () => Navigator.of(context)
-                        .pushNamed(BookAppointment.routeName, arguments: value[index].id),
+                    onTap: () => Navigator.of(context).pushNamed(
+                        BookAppointment.routeName,
+                        arguments: value[index].id),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10,),
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 10,
+                      ),
                       child: DoctorTile(
                         imageUrl: doctorModel.picture,
                         doctorName: doctorModel.name,
@@ -71,7 +74,9 @@ class DoctorsList extends ConsumerWidget {
                       'model': doctorModel,
                     }),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10,),
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 10,
+                      ),
                       child: DoctorTile(
                         imageUrl: doctorModel.picture,
                         doctorName: doctorModel.name,

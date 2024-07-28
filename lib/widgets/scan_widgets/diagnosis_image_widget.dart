@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:smartphone_disease_diagnosis/diagnosis%20models/dental_diagnosis_model.dart';
-import 'package:smartphone_disease_diagnosis/diagnosis%20models/skin_diagnosis_model.dart';
+import 'package:smartphone_disease_diagnosis/diagnosis_models/dental_diagnosis_model.dart';
+import 'package:smartphone_disease_diagnosis/diagnosis_models/skin_diagnosis_model.dart';
 import 'package:smartphone_disease_diagnosis/state/models_state_management.dart';
 
 class DiagnosisImageWidget extends StatelessWidget {
@@ -74,16 +74,15 @@ class DiagnosisImageWidget extends StatelessWidget {
                 icon: const Icon(Icons.camera),
                 label: const Text('Camera'),
                 style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  padding: MaterialStateProperty.all(
+                  foregroundColor: WidgetStateProperty.all(Colors.black),
+                  padding: WidgetStateProperty.all(
                     const EdgeInsets.fromLTRB(0, 10, 20, 5),
                   ),
                 ),
               ),
             ),
             Consumer(
-              builder: (context, ref, child) => 
-              TextButton.icon(
+              builder: (context, ref, child) => TextButton.icon(
                 onPressed: () async {
                   await _pickImage(ImageSource.gallery).then(
                     (_) {
@@ -102,8 +101,8 @@ class DiagnosisImageWidget extends StatelessWidget {
                 icon: const Icon(Icons.photo_library),
                 label: const Text('Gallery'),
                 style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  padding: MaterialStateProperty.all(
+                  foregroundColor: WidgetStateProperty.all(Colors.black),
+                  padding: WidgetStateProperty.all(
                     const EdgeInsets.fromLTRB(0, 10, 20, 5),
                   ),
                 ),

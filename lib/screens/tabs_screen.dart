@@ -61,11 +61,11 @@ class _TabsScreenState extends State<TabsScreen> {
           ),
           itemBuilder: (context) => [
             // PopupMenuItem 1
-            PopupMenuItem(
+            const PopupMenuItem(
               value: 1,
               // row with 2 children
               child: Row(
-                children: const [
+                children: [
                   Icon(
                     Icons.logout,
                     color: Colors.black,

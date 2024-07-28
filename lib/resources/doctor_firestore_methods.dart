@@ -25,9 +25,11 @@ Query<Map<String, dynamic>> filterDoctorsCollection(FiltersModel filters) {
   return collectionRef;
 }
 
-Future<List<DocumentSnapshot>> getFilteredDoctorsList(FiltersModel filters) async {
+Future<List<DocumentSnapshot>> getFilteredDoctorsList(
+    FiltersModel filters) async {
   List<DocumentSnapshot> filteredDoctors = [];
-  bool noAdditionalFilters = filters.yearsOfExperience == 0 && filters.rating == 0;
+  bool noAdditionalFilters =
+      filters.yearsOfExperience == 0 && filters.rating == 0;
   QuerySnapshot<Map<String, dynamic>> snap =
       await filterDoctorsCollection(filters).get();
 
@@ -53,5 +55,3 @@ Future<List<DocumentSnapshot>> getFilteredDoctorsList(FiltersModel filters) asyn
 
   return filteredDoctors;
 }
-
-

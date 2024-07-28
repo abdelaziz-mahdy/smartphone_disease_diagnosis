@@ -11,8 +11,8 @@ final searchStringProvider = StateProvider.autoDispose<String>((ref) => '');
 final filtersProvider =
     StateProvider.autoDispose<FiltersModel>((ref) => FiltersModel());
 
-
-final appointmentDayProvider =StateProvider.autoDispose<DateTime>((ref) => DateTime.now());
+final appointmentDayProvider =
+    StateProvider.autoDispose<DateTime>((ref) => DateTime.now());
 
 final selectedTimeProvider = StateProvider.autoDispose<int?>((ref) => null);
 
@@ -29,8 +29,7 @@ final doctorsListProvider =
     FutureProvider.autoDispose<List<DocumentSnapshot>>((ref) async {
   final filters = ref.watch(filtersProvider);
 
-  final finalList =
-      await getFilteredDoctorsList(filters);
+  final finalList = await getFilteredDoctorsList(filters);
 
   return finalList;
 });
@@ -64,8 +63,8 @@ final apointmentListProvider = FutureProvider.autoDispose<List>((ref) async {
           var bookingTime = i.get('timestamp').toDate();
           if ((bookingTime as DateTime).isSameDate(chosenDay)) {
             String sessionStart = DateFormat.Hm().format(bookingTime);
-            DateTime endTime = bookingTime
-                .add(Duration(minutes: value.get('sessionTime')));
+            DateTime endTime =
+                bookingTime.add(Duration(minutes: value.get('sessionTime')));
             String sessionEnd = DateFormat.Hm().format(endTime);
 
             appointmentSlots.add({

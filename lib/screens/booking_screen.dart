@@ -74,8 +74,9 @@ class BookAppointment extends StatelessWidget {
                       monthColor: Colors.blueGrey,
                       dayColor: Colors.teal[200],
                       activeDayColor: Colors.white,
-                      activeBackgroundDayColor: const Color.fromARGB(255, 127, 164, 248),
-                      dotsColor: const Color(0xFF333A47),
+                      activeBackgroundDayColor:
+                          const Color.fromARGB(255, 127, 164, 248),
+                      dotColor: const Color(0xFF333A47),
                       selectableDayPredicate: (date) =>
                           workDays.contains(DateFormat.E().format(date)),
                       locale: 'en_ISO',
@@ -165,7 +166,7 @@ class BookAppointment extends StatelessWidget {
                                             .state = index;
                                       },
                                       style: ButtonStyle(
-                                        shape: MaterialStateProperty.all<
+                                        shape: WidgetStateProperty.all<
                                             RoundedRectangleBorder>(
                                           RoundedRectangleBorder(
                                             borderRadius:
@@ -173,18 +174,20 @@ class BookAppointment extends StatelessWidget {
                                           ),
                                         ),
                                         backgroundColor:
-                                            MaterialStateProperty.all(
+                                            WidgetStateProperty.all(
                                           ref.watch(selectedTimeProvider) ==
                                                   index
-                                              ? const Color.fromARGB(255, 127, 164, 248)
+                                              ? const Color.fromARGB(
+                                                  255, 127, 164, 248)
                                               : Colors.white,
                                         ),
                                         foregroundColor:
-                                            MaterialStateProperty.all(
+                                            WidgetStateProperty.all(
                                           ref.watch(selectedTimeProvider) ==
                                                   index
                                               ? Colors.white
-                                              : const Color.fromARGB(255, 127, 164, 248),
+                                              : const Color.fromARGB(
+                                                  255, 127, 164, 248),
                                         ),
                                       ),
                                       child: Text(
@@ -245,13 +248,13 @@ class BookAppointment extends StatelessWidget {
                               showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
-                                  return AlertDialog(
+                                  return const AlertDialog(
                                       content: SizedBox(
                                     height: 220,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.stretch,
-                                      children: const [
+                                      children: [
                                         IconButton(
                                           onPressed: null,
                                           icon: Icon(
@@ -284,9 +287,10 @@ class BookAppointment extends StatelessWidget {
                             });
                           },
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 127, 164, 248)),
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
+                            backgroundColor: WidgetStateProperty.all(
+                                const Color.fromARGB(255, 127, 164, 248)),
+                            shape:
+                                WidgetStateProperty.all<RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15.0),
                               ),

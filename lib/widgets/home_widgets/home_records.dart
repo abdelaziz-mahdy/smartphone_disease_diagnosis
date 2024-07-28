@@ -9,7 +9,12 @@ class RecordsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const TabsScreen(atIndex: 3,)));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const TabsScreen(
+                      atIndex: 3,
+                    )));
       },
       child: Container(
         height: 75,
@@ -22,9 +27,9 @@ class RecordsTile extends StatelessWidget {
             const SizedBox(
               width: 17,
             ),
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const <Widget>[
+              children: <Widget>[
                 Text(
                   "View Your Appointments",
                   style: TextStyle(
@@ -48,7 +53,8 @@ class RecordsTile extends StatelessWidget {
             ),
             const Spacer(),
             Container(
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 9),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 9),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(13)),

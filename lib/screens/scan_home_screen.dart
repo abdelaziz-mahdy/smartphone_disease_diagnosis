@@ -10,117 +10,117 @@ class ScanHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              padding: const EdgeInsets.only(
-                  left: 20, top: 0, right: 20, bottom: 20),
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
-                ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            padding:
+                const EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 20),
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50),
               ),
+            ),
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: [
+                    Expanded(
+                      child: InfoCard(
+                        title: "Past AI check-ups",
+                        iconColor: Colors.blue,
+                        subtitle: '3 check-ups',
+                        press: () {},
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Wrap(
+                  spacing: 20,
+                  runSpacing: 20,
+                  children: [
+                    InfoCard(
+                      title: "Learn About",
+                      iconColor: Colors.blue,
+                      subtitle: 'Our AI',
+                      press: () {},
+                    ),
+                    InfoCard(
+                      title: "View",
+                      iconColor: Colors.blue,
+                      subtitle: ' Records',
+                      press: () {},
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  Text(
+                    "Diseases",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineLarge
+                        ?.copyWith(fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 20),
                   Row(
-                    children: [
-                      Expanded(
-                        child: InfoCard(
-                          title: "Past AI check-ups",
-                          iconColor: Colors.blue,
-                          subtitle: '3 check-ups',
-                          press: () {},
-                        ),
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      CategoryCard(
+                        img: "assets/icons/dental_icon.png",
+                        title: "Dental",
+                        press: () {
+                          showModalBottomSheet(
+                            context: context,
+                            builder: (_) => DiagnosisImageWidget(
+                              closeHandler: () => Navigator.of(context).pop(),
+                              diagnosisModel: 'dental',
+                            ),
+                          );
+                        },
+                      ),
+                      CategoryCard(
+                        img: "assets/icons/skin_icon.png",
+                        title: "Skin",
+                        press: () {
+                          showModalBottomSheet(
+                            context: context,
+                            builder: (_) => DiagnosisImageWidget(
+                              closeHandler: () => Navigator.of(context).pop(),
+                              diagnosisModel: 'skin',
+                            ),
+                          );
+                        },
+                      ),
+                      CategoryCard(
+                        img: "",
+                        title: "Covid",
+                        press: () {},
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Wrap(
-                    spacing: 20,
-                    runSpacing: 20,
-                    children: [
-                      InfoCard(
-                        title: "Learn About",
-                        iconColor: Colors.blue,
-                        subtitle: 'Our AI',
-                        press: () {},
-                      ),
-                      InfoCard(
-                        title: "View",
-                        iconColor: Colors.blue,
-                        subtitle: ' Records',
-                        press: () {},
-                      ),
-                    ],
-                  ),
+                  buildHelpCard(context)
                 ],
               ),
             ),
-            const SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "Diseases",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline6
-                          ?.copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        CategoryCard(
-                          img: "assets/icons/dental_icon.png",
-                          title: "Dental",
-                          press: () {
-                            showModalBottomSheet(
-                              context: context,
-                              builder: (_) => DiagnosisImageWidget(
-                                closeHandler: () => Navigator.of(context).pop(),
-                                diagnosisModel: 'dental',
-                              ),
-                            );
-                          },
-                        ),
-                        CategoryCard(
-                          img: "assets/icons/skin_icon.png",
-                          title: "Skin",
-                          press: () {
-                            showModalBottomSheet(
-                              context: context,
-                              builder: (_) => DiagnosisImageWidget(
-                                closeHandler: () => Navigator.of(context).pop(),
-                                diagnosisModel: 'skin',
-                              ),
-                            );
-                          },
-                        ),
-                        CategoryCard(
-                          img: "",
-                          title: "Covid",
-                          press: () {},
-                        ),
-                      ],
-                    ),
-                    buildHelpCard(context)
-                  ],
-                ),
-              ),
-            )
-          ],
-        ),
-      );
+          )
+        ],
+      ),
+    );
   }
 
   Widget buildHelpCard(BuildContext context) {
@@ -157,7 +157,7 @@ class ScanHomeScreen extends StatelessWidget {
                       text: "View Check-up \nTutorial\n",
                       style: Theme.of(context)
                           .textTheme
-                          .headline6
+                          .headlineLarge
                           ?.copyWith(color: Colors.white),
                     ),
                     TextSpan(
@@ -186,7 +186,6 @@ class ScanHomeScreen extends StatelessWidget {
   }
 }
 
-
 class CategoryCard extends StatelessWidget {
   final String img;
   final String title;
@@ -211,7 +210,9 @@ class CategoryCard extends StatelessWidget {
             width: 65,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
-              color: img == "" ? const Color.fromARGB(255, 244, 244, 244) : Colors.white,
+              color: img == ""
+                  ? const Color.fromARGB(255, 244, 244, 244)
+                  : Colors.white,
             ),
             child: img == "" ? null : Image.asset(img),
           ),
@@ -223,7 +224,7 @@ class CategoryCard extends StatelessWidget {
           title,
           style: Theme.of(context)
               .textTheme
-              .headline6
+              .headlineLarge
               ?.copyWith(fontWeight: FontWeight.w600),
         )
       ],

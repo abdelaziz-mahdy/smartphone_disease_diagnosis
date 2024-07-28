@@ -49,8 +49,8 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Text(
                   ' Find',
                   style: TextStyle(
@@ -118,11 +118,11 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
                     );
                   },
                   style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(const Color.fromARGB(255, 127, 164, 248)),
+                    backgroundColor: WidgetStateProperty.all<Color>(
+                        const Color.fromARGB(255, 127, 164, 248)),
                     foregroundColor:
-                        MaterialStateProperty.all<Color>(Colors.white),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        WidgetStateProperty.all<Color>(Colors.white),
+                    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
