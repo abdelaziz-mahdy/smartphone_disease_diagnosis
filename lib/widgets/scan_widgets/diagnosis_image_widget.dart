@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:smartphone_disease_diagnosis/diagnosis%20models/dental_diagnosis_model.dart';
-import 'package:smartphone_disease_diagnosis/diagnosis%20models/skin_diagnosis_model.dart';
+import 'package:smartphone_disease_diagnosis/diagnosis_models/dental_diagnosis_model.dart';
+import 'package:smartphone_disease_diagnosis/diagnosis_models/skin_diagnosis_model.dart';
 import 'package:smartphone_disease_diagnosis/state/models_state_management.dart';
 
 class DiagnosisImageWidget extends StatelessWidget {

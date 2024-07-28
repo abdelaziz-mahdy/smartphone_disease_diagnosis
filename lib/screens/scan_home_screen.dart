@@ -73,7 +73,7 @@ class ScanHomeScreen extends StatelessWidget {
                       "Diseases",
                       style: Theme.of(context)
                           .textTheme
-                          .headline6
+                          .headlineLarge
                           ?.copyWith(fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 20),
@@ -157,7 +157,7 @@ class ScanHomeScreen extends StatelessWidget {
                       text: "View Check-up \nTutorial\n",
                       style: Theme.of(context)
                           .textTheme
-                          .headline6
+                          .headlineLarge
                           ?.copyWith(color: Colors.white),
                     ),
                     TextSpan(
@@ -223,7 +223,7 @@ class CategoryCard extends StatelessWidget {
           title,
           style: Theme.of(context)
               .textTheme
-              .headline6
+              .headlineLarge
               ?.copyWith(fontWeight: FontWeight.w600),
         )
       ],

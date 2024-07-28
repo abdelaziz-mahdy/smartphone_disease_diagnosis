@@ -2,7 +2,7 @@ import 'package:concentric_transition/concentric_transition.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../screens/SignInUp/signoptions.dart';
+import 'sign_In_up/sign_options.dart';
 import '../widgets/authorization_widgets/card_planet.dart';
 
 

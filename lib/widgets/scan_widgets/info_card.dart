@@ -80,7 +80,7 @@ class InfoCard extends StatelessWidget {
                                   text: "$subtitle \n",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline6
+                                      .headlineLarge
                                       ?.copyWith(
                                         fontWeight: FontWeight.bold,
                                       ),
