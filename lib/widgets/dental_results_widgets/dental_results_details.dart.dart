@@ -101,7 +101,8 @@ class DentailResultsDetailsScreen extends StatelessWidget {
                               ),
                             ),
                             Text(
-                             (detections[index]!.score*100).toStringAsFixed(2),
+                              (detections[index]!.score * 100)
+                                  .toStringAsFixed(2),
                               style: const TextStyle(
                                 fontSize: 18,
                               ),

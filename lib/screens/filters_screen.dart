@@ -40,19 +40,23 @@ class _FiltersWidgetState extends State<FiltersWidget> {
         });
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(
-            (_cityValue == index) ? const Color.fromARGB(255, 127, 164, 248) : Colors.white),
-        shape: MaterialStateProperty.all(
+        backgroundColor: WidgetStateProperty.all((_cityValue == index)
+            ? const Color.fromARGB(255, 127, 164, 248)
+            : Colors.white),
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        side: MaterialStateProperty.all(const BorderSide(color: Color.fromARGB(255, 127, 164, 248))),
+        side: WidgetStateProperty.all(
+            const BorderSide(color: Color.fromARGB(255, 127, 164, 248))),
       ),
       child: Text(
         text,
         style: TextStyle(
-          color: (_cityValue == index) ? Colors.white : const Color.fromARGB(255, 127, 164, 248),
+          color: (_cityValue == index)
+              ? Colors.white
+              : const Color.fromARGB(255, 127, 164, 248),
         ),
       ),
     );
@@ -66,19 +70,23 @@ class _FiltersWidgetState extends State<FiltersWidget> {
         });
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(
-            (_categoryValue == index) ? const Color.fromARGB(255, 127, 164, 248) : Colors.white),
-        shape: MaterialStateProperty.all(
+        backgroundColor: WidgetStateProperty.all((_categoryValue == index)
+            ? const Color.fromARGB(255, 127, 164, 248)
+            : Colors.white),
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        side: MaterialStateProperty.all(const BorderSide(color: Color.fromARGB(255, 127, 164, 248))),
+        side: WidgetStateProperty.all(
+            const BorderSide(color: Color.fromARGB(255, 127, 164, 248))),
       ),
       child: Text(
         text,
         style: TextStyle(
-          color: (_categoryValue == index) ? Colors.white : const Color.fromARGB(255, 127, 164, 248),
+          color: (_categoryValue == index)
+              ? Colors.white
+              : const Color.fromARGB(255, 127, 164, 248),
         ),
       ),
     );
@@ -92,19 +100,23 @@ class _FiltersWidgetState extends State<FiltersWidget> {
         });
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(
-            (_priceValue == index) ? const Color.fromARGB(255, 127, 164, 248) : Colors.white),
-        shape: MaterialStateProperty.all(
+        backgroundColor: WidgetStateProperty.all((_priceValue == index)
+            ? const Color.fromARGB(255, 127, 164, 248)
+            : Colors.white),
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        side: MaterialStateProperty.all(const BorderSide(color: Color.fromARGB(255, 127, 164, 248))),
+        side: WidgetStateProperty.all(
+            const BorderSide(color: Color.fromARGB(255, 127, 164, 248))),
       ),
       child: Text(
         text,
         style: TextStyle(
-          color: (_priceValue == index) ? Colors.white : const Color.fromARGB(255, 127, 164, 248),
+          color: (_priceValue == index)
+              ? Colors.white
+              : const Color.fromARGB(255, 127, 164, 248),
         ),
       ),
     );
@@ -236,13 +248,13 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.white),
-                            shape: MaterialStateProperty.all(
+                                WidgetStateProperty.all(Colors.white),
+                            shape: WidgetStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
                             ),
-                            side: MaterialStateProperty.all(
+                            side: WidgetStateProperty.all(
                                 BorderSide(color: Colors.redAccent[100]!)),
                           ),
                           child: Text(
@@ -265,17 +277,21 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 FiltersModel(
                               specialty: categoryNames[_categoryValue - 1],
                               city: cityNames[_cityValue - 1],
-                              rating: _starRating == 0 ? _starRating : _starRating + 1,
+                              rating: _starRating == 0
+                                  ? _starRating
+                                  : _starRating + 1,
                               yearsOfExperience: _yearsValue,
-                              priceLow: mappedPrices[_priceValue - 1]['priceLow'] as int,
-                              priceHigh: mappedPrices[_priceValue - 1]['priceHigh'],
+                              priceLow: mappedPrices[_priceValue - 1]
+                                  ['priceLow'] as int,
+                              priceHigh: mappedPrices[_priceValue - 1]
+                                  ['priceHigh'],
                             );
                             Navigator.of(context).pop();
                           },
                           style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(const Color.fromARGB(255, 127, 164, 248)),
-                            shape: MaterialStateProperty.all(
+                            backgroundColor: WidgetStateProperty.all(
+                                const Color.fromARGB(255, 127, 164, 248)),
+                            shape: WidgetStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),

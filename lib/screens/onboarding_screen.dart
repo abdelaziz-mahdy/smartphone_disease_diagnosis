@@ -5,8 +5,6 @@ import 'package:lottie/lottie.dart';
 import 'sign_In_up/sign_options.dart';
 import '../widgets/authorization_widgets/card_planet.dart';
 
-
-
 class OnboardingPage extends StatelessWidget {
   OnboardingPage({Key? key}) : super(key: key);
 

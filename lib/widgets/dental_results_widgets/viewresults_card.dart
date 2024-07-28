@@ -4,7 +4,8 @@ class ViewScanDetailsTile extends StatelessWidget {
   final String title;
   final String subtitle;
   final Function()? press;
-  const ViewScanDetailsTile({Key? key, 
+  const ViewScanDetailsTile({
+    Key? key,
     required this.title,
     required this.subtitle,
     this.press,
@@ -55,7 +56,8 @@ class ViewScanDetailsTile extends StatelessWidget {
             GestureDetector(
               onTap: press,
               child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(13)),

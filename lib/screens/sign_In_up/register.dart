@@ -28,8 +28,7 @@ class RegisterScreen extends StatelessWidget {
     //   adressscontroller.dispose();
     //   emailcontroller.dispose();
     //   passwordcontroller.dispose();
-    // 
-
+    //
 
     return Scaffold(
       backgroundColor: Colors.white,

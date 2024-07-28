@@ -54,10 +54,10 @@ class SkinModel extends ConsumerWidget {
 
     return imageModelProvider.value == null
         ? const Scaffold(
-          body: Center(
+            body: Center(
               child: Text('Loading....'),
             ),
-        )
+          )
         : image == null
             ? const Center(
                 child: Text('Oops! Failed to Load image....'),
@@ -71,7 +71,8 @@ class SkinModel extends ConsumerWidget {
                     if (snapshot.hasError) {
                       return Scaffold(
                         body: Center(
-                          child: Text('Something went wrong: ${snapshot.error}'),
+                          child:
+                              Text('Something went wrong: ${snapshot.error}'),
                         ),
                       );
 

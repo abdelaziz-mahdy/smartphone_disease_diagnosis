@@ -40,32 +40,32 @@ class _MoreInfoState extends State<MoreInfo> {
       backgroundColor: Colors.white,
       body: SafeArea(
           child: PageView(
-            controller: pageController,
-            children: [
-              InfoPage(
-                hero: const GenderSlide(),
-                title: "What’s your gender?",
-                onNext: () => nextPage(),
-              ),
-              InfoPage(
-                hero: const AgeSlider(),
-                title: "What’s your age?",
-                onNext: () => nextPage(),
-              ),
-              InfoPage(
-                hero: const HeightSlider(),
-                title: "What’s your height?",
-                onNext: () => nextPage(),
-              ),
-              Consumer(
-                builder: (context, ref, child) => InfoPage(
-                  hero: const WeightSlider(),
-                  title: "What’s your weight?",
-                  onNext: () => uploadUserInfo(ref),
-                ),
-              ),
-            ],
-          )),
+        controller: pageController,
+        children: [
+          InfoPage(
+            hero: const GenderSlide(),
+            title: "What’s your gender?",
+            onNext: () => nextPage(),
+          ),
+          InfoPage(
+            hero: const AgeSlider(),
+            title: "What’s your age?",
+            onNext: () => nextPage(),
+          ),
+          InfoPage(
+            hero: const HeightSlider(),
+            title: "What’s your height?",
+            onNext: () => nextPage(),
+          ),
+          Consumer(
+            builder: (context, ref, child) => InfoPage(
+              hero: const WeightSlider(),
+              title: "What’s your weight?",
+              onNext: () => uploadUserInfo(ref),
+            ),
+          ),
+        ],
+      )),
     );
   }
 }
@@ -132,8 +132,8 @@ class ProgressButton extends StatelessWidget {
               onTap: onNext,
               child: Container(
                 height: 60,
-                decoration:
-                    const BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
+                decoration: const BoxDecoration(
+                    color: Colors.blue, shape: BoxShape.circle),
                 child: const Center(
                   child: Icon(Icons.arrow_forward),
                 ),

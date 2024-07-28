@@ -74,16 +74,15 @@ class DiagnosisImageWidget extends StatelessWidget {
                 icon: const Icon(Icons.camera),
                 label: const Text('Camera'),
                 style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  padding: MaterialStateProperty.all(
+                  foregroundColor: WidgetStateProperty.all(Colors.black),
+                  padding: WidgetStateProperty.all(
                     const EdgeInsets.fromLTRB(0, 10, 20, 5),
                   ),
                 ),
               ),
             ),
             Consumer(
-              builder: (context, ref, child) => 
-              TextButton.icon(
+              builder: (context, ref, child) => TextButton.icon(
                 onPressed: () async {
                   await _pickImage(ImageSource.gallery).then(
                     (_) {
@@ -102,8 +101,8 @@ class DiagnosisImageWidget extends StatelessWidget {
                 icon: const Icon(Icons.photo_library),
                 label: const Text('Gallery'),
                 style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  padding: MaterialStateProperty.all(
+                  foregroundColor: WidgetStateProperty.all(Colors.black),
+                  padding: WidgetStateProperty.all(
                     const EdgeInsets.fromLTRB(0, 10, 20, 5),
                   ),
                 ),

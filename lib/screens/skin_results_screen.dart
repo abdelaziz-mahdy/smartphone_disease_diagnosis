@@ -130,10 +130,10 @@ class SkinRes extends StatelessWidget {
                                   });
                             },
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
+                              backgroundColor: WidgetStateProperty.all(
                                 const Color.fromRGBO(130, 102, 117, 1),
                               ),
-                              shape: MaterialStateProperty.all(
+                              shape: WidgetStateProperty.all(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),

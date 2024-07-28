@@ -5,8 +5,6 @@ import '../../widgets/authorization_widgets/main_button.dart';
 import 'register.dart';
 import 'sign_in.dart';
 
-
-
 class SignOptions extends StatelessWidget {
   const SignOptions({Key? key}) : super(key: key);
 

@@ -22,7 +22,11 @@ class AuthenticationMethods {
             email: email, password: password);
 
         await cloudFirestore.uploadUserInfo(
-            name: name.split(" ").map((str) =>'${str[0].toUpperCase()}${str.substring(1).toLowerCase()}').join(" "),
+            name: name
+                .split(" ")
+                .map((str) =>
+                    '${str[0].toUpperCase()}${str.substring(1).toLowerCase()}')
+                .join(" "),
             address: address,
             email: email,
             age: null,

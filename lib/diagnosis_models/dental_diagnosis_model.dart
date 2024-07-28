@@ -48,10 +48,10 @@ class DentalModel extends ConsumerWidget {
     final image = ref.watch(imageProvider);
     return objectModelProvider.value == null
         ? const Scaffold(
-          body: Center(
+            body: Center(
               child: Text('Loading....'),
             ),
-        )
+          )
         : image == null
             ? const Center(
                 child: Text('Oops! Failed to Load image....'),

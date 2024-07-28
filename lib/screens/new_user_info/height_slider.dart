@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../state/sign_up_state_management.dart';
 
-
 class HeightSlider extends StatefulWidget {
   const HeightSlider({Key? key}) : super(key: key);
   @override
@@ -57,8 +56,10 @@ class _HeightSliderState extends State<HeightSlider> {
             SliderTheme(
               data: SliderTheme.of(context).copyWith(
                   thumbColor: Colors.white,
-                  thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 10.0),
-                  overlayShape: const RoundSliderOverlayShape(overlayRadius: 20.0)),
+                  thumbShape:
+                      const RoundSliderThumbShape(enabledThumbRadius: 10.0),
+                  overlayShape:
+                      const RoundSliderOverlayShape(overlayRadius: 20.0)),
               child: Consumer(
                 builder: (context, ref, child) => Slider(
                   value: heightc.toDouble(),

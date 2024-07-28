@@ -105,8 +105,8 @@ class _SignInState extends State<SignIn> {
                                   email: emailcontroller.text,
                                   password: passwordcontroller.text);
                           if (output == "success") {
-                            Navigator.pushReplacementNamed(context, TabsScreen.routeName);
-
+                            Navigator.pushReplacementNamed(
+                                context, TabsScreen.routeName);
                           } else {
                             Utils().showSnackBar(
                                 context: context, content: output);

@@ -4,7 +4,6 @@ import 'package:vertical_weight_slider/vertical_weight_slider.dart';
 
 import '../../state/sign_up_state_management.dart';
 
-
 class WeightSlider extends StatefulWidget {
   const WeightSlider({Key? key}) : super(key: key);
   @override
@@ -35,8 +34,7 @@ class _WeightSliderState extends State<WeightSlider> {
         children: [
           Text(
             "${_weight.toStringAsFixed(1)} kg",
-            style:
-                const TextStyle(fontSize: 30.0, fontWeight: FontWeight.w500),
+            style: const TextStyle(fontSize: 30.0, fontWeight: FontWeight.w500),
           ),
           const SizedBox(
             height: 20,

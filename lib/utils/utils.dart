@@ -3,7 +3,7 @@ import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class Utils {
   Size getScreenSize() {
-    return MediaQueryData.fromWindow(WidgetsBinding.instance.window).size;
+    return MediaQueryData.fromView(WidgetsBinding.instance.window).size;
   }
 
   showSnackBar({required BuildContext context, required String content}) {

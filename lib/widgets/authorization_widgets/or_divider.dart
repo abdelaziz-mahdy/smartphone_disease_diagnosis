@@ -9,7 +9,7 @@ class OrDivider extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: size.height * 0.03),
       width: size.width * 0.8,
-      child: Row(children: const [
+      child: const Row(children: [
         Expanded(
           child: Divider(
             color: Colors.grey,

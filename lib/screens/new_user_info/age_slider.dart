@@ -38,9 +38,9 @@ class _AgeSliderState extends State<AgeSlider> {
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(6.0),
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Icon(
                         Icons.arrow_left,
                         size: 38,
@@ -73,7 +73,9 @@ class _AgeSliderState extends State<AgeSlider> {
                     );
                   },
                 ),
-                onSelectedItemChanged: (_) => ref.read(ageProvider.notifier).state = controller.selectedItem,
+                onSelectedItemChanged: (_) => ref
+                    .read(ageProvider.notifier)
+                    .state = controller.selectedItem,
               ),
             ),
           ],

@@ -6,7 +6,6 @@ import 'package:timezone/data/latest.dart' as tz;
 
 import '../models/medication_model.dart';
 
-
 class NotifyHelper {
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin(); //

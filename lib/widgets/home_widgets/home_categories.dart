@@ -6,7 +6,6 @@ class Categories extends StatelessWidget {
   const Categories({Key? key}) : super(key: key);
 
   void press(BuildContext context, Widget? screenName) {
-
     if (screenName != null) {
       Navigator.push(context, MaterialPageRoute(builder: (_) => screenName));
     }

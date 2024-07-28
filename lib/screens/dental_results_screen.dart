@@ -6,9 +6,7 @@ import 'package:pytorch_lite/pigeon.dart';
 import '../widgets/dental_results_widgets/dental_results_details.dart.dart';
 import '../widgets/dental_results_widgets/viewresults_card.dart';
 
-
 class DentalResultsScreen extends StatelessWidget {
-
   final List<ResultObjectDetection?> detections;
   final File image;
   const DentalResultsScreen(
@@ -21,7 +19,6 @@ class DentalResultsScreen extends StatelessWidget {
     //     .toList();
 
     List<String?> diseaseNames = detections.map((e) => e!.className).toList();
-
 
     var diseaseCounts = {};
 
@@ -37,8 +34,8 @@ class DentalResultsScreen extends StatelessWidget {
 
     var diseaseCountList = [];
 
-    diseaseCounts.forEach((k, v) => diseaseCountList.add({'name' : k, 'count' : v}));
-
+    diseaseCounts
+        .forEach((k, v) => diseaseCountList.add({'name': k, 'count': v}));
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -84,10 +81,10 @@ class DentalResultsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       "Total potential issues",
                       style:
@@ -142,8 +139,8 @@ class DentalResultsScreen extends StatelessWidget {
                 )),
               ],
             ),
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Expanded(child: ScaanInfo()),
               ],
             ),
@@ -198,11 +195,11 @@ class ScaanInfo extends StatelessWidget {
       height: 150,
       width: 200,
       // color: Colors.black45,
-      child: SafeArea(
+      child: const SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
+          children: <Widget>[
             Text(
               "Results",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
